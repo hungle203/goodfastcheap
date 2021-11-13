@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" name="gfc" id="good" value="good" onclick="check1()"> <label for="good">good</label><br>
+<input type="checkbox" name="gfc" id="fast" value="fast" onclick="check2()"> <label for="fast">fast</label><br>
+<input type="checkbox" name="gfc" id="cheap" value="cheap" onclick="check3()"> <label for="cheap">cheap</label>
+</body>
+</html>
+<script>
+    function check1() {
+        let good = document.getElementById("good").checked;
+        let fast = document.getElementById("fast").checked;
+        if (good === fast) {
+            document.getElementById("cheap").checked = false;
+        }
+    }
+    function check2() {
+        let fast = document.getElementById("fast").checked;
+        let cheap = document.getElementById("good").checked;
+        if (fast === cheap) {
+            document.getElementById("good").checked = false;
+        }
+    }
+    function check3() {
+        let cheap = document.getElementById("cheap").checked;
+        let fast = document.getElementById("fast").checked;
+        if (cheap === fast) {
+            document.getElementById("good").checked = false;
+        }
+    }
+</script>
+
+
